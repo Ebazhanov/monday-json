@@ -48,4 +48,27 @@ public class AddressParserTestNew {
         assertEquals("Winterallee", address.getStreetName());
         assertEquals("3", address.getHouseNumber());
     }
+
+    @Test
+    public void shouldParseMoreComplicatedAddress() {
+        // given
+        final AddressParser parser = new AddressParser();
+        final String input = "Auf der Vogelwiese 23 b";
+
+        // when
+        final Address address = parser.parse(input);
+
+        // then
+        assertEquals("Auf der Vogelwiese", address.getStreetName());
+        assertEquals("23 b", address.getHouseNumber());
+    }
+
+
+    @Test
+    public void tadfasdf(){
+        final String input = "Auf der Vogelwiese 23 b";
+        final String[] split = input.split("0-9");
+        final Address addressJson = new Address(split[0], split[1]);
+        assertEquals("Auf der Vogelwiese", addressJson.getStreetName());
+    }
 }
