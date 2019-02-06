@@ -129,13 +129,15 @@ public class AddressParserTestNewNEW {
         final String input = "Auf der Vogelwiese 23 b";
         int index;
         int charAt;
+        int numberStarted = 0;
         for (index = 0; index < input.length(); index++) {
             charAt = input.charAt(index);
             if (Character.isDigit(charAt)) {
+                numberStarted = index;
                 break;
             }
         }
-        final Address addressJson = new Address(input.substring(0, 18), input.substring(index, 23));
+        final Address addressJson = new Address(input.substring(0, 18), input.substring(numberStarted, 23));
         assertEquals(addressJson.getStreetName(), "Auf der Vogelwiese");
         assertEquals(addressJson.getHouseNumber(), "23 b");
     }
