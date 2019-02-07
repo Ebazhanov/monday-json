@@ -124,23 +124,28 @@ public class AddressParserTestNewNEW {
         assertEquals(addressJson.getStreetName(), "Auf der Vogelwiese");*/
     }
 
-    @Test
-    public void shouldHave() {
-        final String input = "Auf der Vogelwiese 23 b";
-        int index;
-        int charAt;
-        int numberStarted = 0;
-        for (index = 0; index < input.length(); index++) {
-            charAt = input.charAt(index);
-            if (Character.isDigit(charAt)) {
-                numberStarted = index;
-                break;
+        @Test
+        public void shouldHave() {
+            final String input = "Auf der Vogelwiese 23 b";
+            int index;
+            int charAt;
+            int numberStarted = 0;
+            int startString = 0;
+            int streetEnd=0;
+            for (index = 0; index < input.length(); index++) {
+                charAt = input.charAt(index);
+                streetEnd++;
+                if (Character.isDigit(charAt)) {
+                    numberStarted = index;
+                    break;
+                }
             }
+            final Address addressJson = new Address(input.substring(startString, streetEnd-2), input.substring(numberStarted, 23));
+            assertEquals(addressJson.getStreetName(), "Auf der Vogelwiese");
+            assertEquals(addressJson.getHouseNumber(), "23 b");
         }
-        final Address addressJson = new Address(input.substring(0, 18), input.substring(numberStarted, 23));
-        assertEquals(addressJson.getStreetName(), "Auf der Vogelwiese");
-        assertEquals(addressJson.getHouseNumber(), "23 b");
-    }
+
+
 
 
 
