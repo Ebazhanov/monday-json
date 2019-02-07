@@ -1,11 +1,8 @@
 package tests;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 public class Solution1 {
 
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    /*private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static void main(String[] args) {
         //TO JSON
@@ -17,7 +14,7 @@ public class Solution1 {
         Address address1 = GSON.fromJson(json, Address.class);
         System.out.println(address1.getStreet());
         System.out.println(address1.getHouseNumber());
-    }
+    }*/
 
     static class Address {
         private String street;

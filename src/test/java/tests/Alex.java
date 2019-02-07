@@ -37,7 +37,7 @@ public class Alex {
             final char charAt = input.charAt(index);
             if (Character.isDigit(charAt)) {
                 numberStarted = index;
-                break;
+                //break;
             }
         }
         return numberStarted;

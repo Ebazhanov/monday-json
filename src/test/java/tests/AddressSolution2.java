@@ -1,21 +1,14 @@
 package tests;
 
 
-import com.bluelinelabs.logansquare.LoganSquare;
-import com.bluelinelabs.logansquare.annotation.JsonField;
-import com.bluelinelabs.logansquare.annotation.JsonObject;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-
-@JsonObject
+//@JsonObject
 public class AddressSolution2 {
-    @JsonField(name = "street")
+/*    @JsonField(name = "street")
     public String street;
     @JsonField(name = "housenumber")
-    public String housenumber;
+    public String housenumber;*/
 
+/*
     public String getStreet() {
         return street;
     }
@@ -23,10 +16,11 @@ public class AddressSolution2 {
     public String getHousenumber() {
         return housenumber;
     }
+*/
 
     // 1. Write a simple program that does the task for the most simple cases, e.g.
 
-    @Test
+/*    @Test
     public void firstTest() throws IOException {
         String jsonString = "{\"street\": \"Winterallee\", \"housenumber\": \"3\"}";
         AddressSolution2 json = LoganSquare.parse(jsonString, AddressSolution2.class);
@@ -91,7 +85,7 @@ public class AddressSolution2 {
         String jsonString = "{\"street\": \"Calle 39\", \"housenumber\": \"No 1540\"}";
         AddressSolution2 json = LoganSquare.parse(jsonString, AddressSolution2.class);
         Assert.assertEquals(json.getStreet() + " " + json.getHousenumber(), "Calle 39 No 1540");
-    }
+    }*/
 
 
 }
