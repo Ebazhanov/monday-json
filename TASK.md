@@ -1,7 +1,3 @@
-# CODE CHALLENGE
-
-We kindly ask you to solve the following code challenge (in Java, Kotlin or Python) as part of our selection process.
-
 ## Addressline
 
 An address provider returns addresses only with concatenated street names and numbers. Our own system on the other hand has separate fields for street name and street number.
@@ -24,7 +20,3 @@ An address provider returns addresses only with concatenated street names and nu
    1. `"200 Broadway Av"` -> `{"street": "Broadway Av", "housenumber": "200"}`
    1. `"Calle Aduana, 29"` -> `{"street": "Calle Aduana", "housenumber": "29"}`
    1. `"Calle 39 No 1540"` -> `{"street": "Calle 39", "housenumber": "No 1540"}`
-
-**Your Task:**
-
-Write a running application in the programming language of your choice including test cases and send the source code back to jobs@friday.de
