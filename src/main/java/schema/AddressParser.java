@@ -3,6 +3,8 @@ package schema;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import static helpers.IndexCount.findFirstNumberInString;
+
 public class AddressParser {
     private final static Gson GSON = new Gson();
 
@@ -16,14 +18,5 @@ public class AddressParser {
         return GSON.toJson(jsonAddress);
     }
 
-    private int findFirstNumberInString(String input) {
-        for (int index = 0; index < input.length(); index++) {
-            final char charAt = input.charAt(index);
-            if (Character.isDigit(charAt)) {
-                return index;
-            }
-        }
-        return -1;
-    }
 
 }

@@ -5,7 +5,7 @@ import schema.AddressParser;
 
 import static org.testng.Assert.assertEquals;
 
-public class AlexNew {
+public class TestCases {
 
     private final AddressParser parser = new AddressParser();
 
