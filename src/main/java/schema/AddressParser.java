@@ -1,11 +1,11 @@
 package schema;
 
-public class Address {
+public class AddressParser {
 
     private final String streetName;
     private final String houseNumber;
 
-    public Address(String streetName, String houseNumber) {
+    public AddressParser(String streetName, String houseNumber) {
         this.streetName = streetName;
         this.houseNumber = houseNumber;
     }
@@ -17,4 +17,5 @@ public class Address {
     public String getHouseNumber() {
         return houseNumber;
     }
+
 }
