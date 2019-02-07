@@ -1,4 +1,4 @@
-package tests.folder;
+package schema;
 
 public class Address {
 

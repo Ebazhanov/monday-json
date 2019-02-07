@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
-import tests.folder.Address;
+import schema.Address;
 
 import static org.testng.Assert.assertEquals;
 
