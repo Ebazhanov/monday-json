@@ -11,23 +11,22 @@ public class MoreComplexTests {
     private final static Gson GSON = new Gson();
 
     public static int findFirstNumberInStringNew(String input) {
-        //int inputNo = input.indexOf("No");
-        //int inputСomma = input.indexOf(",");
-
         if (input.contains("No")) {
+            System.out.println("В СТРОКЕ ЕСТЬ 'No'");
             return input.indexOf("No");
         } else if (input.contains(",")) {
-            return input.indexOf(",");
-        } /*else if (!(input.indexOf(",") | input.indexOzf("No")) {
-            System.out.println("НЕТУ номера и запятой");
-        }*/
-
+            System.out.println("В СТРОКЕ ЕСТЬ ЗАПЯТАЯ");
+            return input.indexOf(",") + 1;
+        } else if (input.matches(".*[^0-9].*")) {
+            System.out.println("СТРОКА НАЧИНАЕТСЯ С НОМЕРА");
+            return input.indexOf(" ") + 1;
+        }
         return -1;
     }
 
     public String parse(String input) {
         final int firstNumberIndex = findFirstNumberInStringNew(input);
-        final String streetName = input.substring(0, firstNumberIndex-1);
+        final String streetName = input.substring(0, firstNumberIndex - 1);
         final String houseNumber = input.substring(firstNumberIndex);
         final JsonObject jsonAddress = new JsonObject();
         jsonAddress.addProperty("street", streetName);
