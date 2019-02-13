@@ -36,7 +36,7 @@ public class MoreComplexTestsNew {
 
     public String parseNumbersFirst(String input) {
         final int firstNumberIndex = findFirstNumberInStringNew(input);
-        final String streetName = input.substring(firstNumberIndex);
+        final String streetName = input.substring(firstNumberIndex).trim();
         final String houseNumber = input.substring(0, firstNumberIndex - 1);
         final JsonObject jsonAddress = new JsonObject();
         jsonAddress.addProperty("street", streetName);
