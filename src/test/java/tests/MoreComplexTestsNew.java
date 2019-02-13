@@ -13,11 +13,11 @@ public class MoreComplexTestsNew {
     public static int findFirstNumberInStringNew(String input) {
         if (input.contains("No")) {
             System.out.println("В СТРОКЕ ЕСТЬ 'No'");
-            return input.indexOf(" No ") + 1;
+            return input.indexOf("No")+1;
         } else if (input.contains(",")) {
             System.out.println("В СТРОКЕ ЕСТЬ ЗАПЯТАЯ");
             return input.indexOf(",") + 1;
-        } else if (input.matches(".*[^0-9].*")) {
+        } else if (Character.isDigit(input.charAt(0))) {
             System.out.println("СТРОКА НАЧИНАЕТСЯ С НОМЕРА");
             return input.indexOf(" ") + 1;
         }
