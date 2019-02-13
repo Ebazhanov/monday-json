@@ -13,7 +13,7 @@ public class MoreComplexTestsNew {
     public static int findFirstNumberInStringNew(String input) {
         if (input.contains("No")) {
             System.out.println("В СТРОКЕ ЕСТЬ 'No'");
-            return input.indexOf("No")+1;
+            return input.indexOf("No");
         } else if (input.contains(",")) {
             System.out.println("В СТРОКЕ ЕСТЬ ЗАПЯТАЯ");
             return input.indexOf(",") + 1;
@@ -27,7 +27,7 @@ public class MoreComplexTestsNew {
     public String parseNumbersLast(String input) {
         final int firstNumberIndex = findFirstNumberInStringNew(input);
         final String streetName = input.substring(0, firstNumberIndex - 1);
-        final String houseNumber = input.substring(firstNumberIndex + 1);
+        final String houseNumber = input.substring(firstNumberIndex).trim();
         final JsonObject jsonAddress = new JsonObject();
         jsonAddress.addProperty("street", streetName);
         jsonAddress.addProperty("housenumber", houseNumber);
