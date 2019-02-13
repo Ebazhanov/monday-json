@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class MoreComplexTests {
+public class MoreComplexTestsOldVariant {
 
     private final static Gson GSON = new Gson();
 
